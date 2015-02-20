@@ -11,8 +11,8 @@ ip link del docker0
 systemctl daemon-reload
 
 for service in flanneld docker.socket docker kubelet kube-proxy; do
-	echo "activating service $service"
-	systemctl enable $service
-	systemctl --no-block start $service
+  echo "activating service $service"
+  systemctl enable $service
+  systemctl --no-block start $service
 done
 
